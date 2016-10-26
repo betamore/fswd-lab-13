@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    script(src="/jspm_packages/system.js")
+    script(src="/config.js")
+    script
+      | System.import('angular-route').then(function() {
+      |   System.import('app');
+      | }).catch(console.error.bind(console));
+    title Hello world!
+  body(style="display: none")
+    div.container
+      .page-header
+        block header
+          p Header
+      .row
+        != messages()
+      block body
+      block footer
+        if user
+          .row
+            .col-md-12
+              .pull-right
+                small Hello #{user.username}!

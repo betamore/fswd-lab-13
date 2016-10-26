@@ -1,0 +1,4 @@
+ul
+  li(ng-repeat="task in $ctrl.taskList | filter: $ctrl.taskFilter track by $index")
+    input(type="checkbox" ng-click="$ctrl.onClick({ thing: task })")
+    fswd-task(task="task")

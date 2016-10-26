@@ -1,0 +1,4 @@
+ul
+  li(ng-repeat="task in vm.todoList track by $index")
+    input(type="checkbox" ng-click="vm.onClick({ thing: task })")
+    fswd-task(task="task")

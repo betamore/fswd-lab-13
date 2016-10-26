@@ -1,0 +1,27 @@
+extends ../layout.pug
+block header
+  h1 Angular Playground
+block body
+  ng-view
+  //- div(ng-controller="TodoListController as vm")
+  //-   input(type="text" ng-model="toFilter")
+  //-   ul
+  //-     li(ng-repeat="task in vm.todoList | filter: { name: toFilter } track by $index")
+  //-       input(type="checkbox" ng-click="vm.removeTodo(task)")
+  //-       fswd-task(task="task")
+  //-
+  //-   h2 Task List directive
+  //-   fswd-task-list(task-list="vm.todoList"
+  //-                  on-click="vm.removeTodo(thing)"
+  //-                  to-filter="toFilter")
+  //-
+  //-   h2 Task List Component
+  //-   fswd-task-list-component(task-list="vm.todoList"
+  //-                            on-click="vm.removeTodo(thing)"
+  //-                            to-filter="toFilter")
+  //-
+  //-   input(ng-model="toAdd" type="text")
+  //-   button(ng-click="vm.addTodo(toAdd); toAdd = ''") Add it!
+  //- hr
+  //- div(ng-controller="TodoListController as otherVm")
+  //-   p There are {{ otherVm.todoList.length }} items.
