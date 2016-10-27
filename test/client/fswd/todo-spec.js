@@ -1,15 +1,11 @@
-import angular from 'angular';
+import 'angular';
+import 'angular-mocks';
+import '/public/fswd/todo';
 
-// describe('fswd.todo.TodoController', function() {
-//   beforeEach(angular.mock.module('fswd.todo'));
-//
-//   it('should receive a task', inject(function($controller) {
-//     var todoController = $controller('TodoController', {
-//       task: {
-//         name: 'Task'
-//       }
-//     });
-//
-//     expect(todoController.task);
-//   }));
-// });
+describe('fswd.todo', function() {
+  beforeEach(angular.mock.module('fswd.todo'));
+
+  it('should exist', function() {
+    angular.module('fswd.todo').should.be.ok;
+  });
+});

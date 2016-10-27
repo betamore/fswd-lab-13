@@ -1,6 +1,6 @@
 import 'angular';
 import _ from 'lodash';
-import ngRoute from 'angular-route';
+import 'angular-route';
 
 angular.module('fswd.todo', ['ngRoute'])
   .run(function($rootScope) {

@@ -1,6 +1,3 @@
-// import angular from 'angular';
-// import from '../../../public/fswd';
-
 import 'angular';
 import 'angular-mocks';
 import '/public/fswd';
