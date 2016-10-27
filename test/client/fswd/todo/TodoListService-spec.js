@@ -1,7 +1,3 @@
-// import angular from 'angular';
-// import 'angular-mocks';
-// import from '../../../public/fswd';
-
 import 'angular';
 import 'angular-mocks';
 import '/public/fswd/todo';
@@ -11,6 +7,8 @@ describe('fswd.todo.TodoListService', function() {
 
   afterEach(inject(function($httpBackend) {
     $httpBackend.flush();
+    $httpBackend.verifyNoOutstandingExpectation();
+    $httpBackend.verifyNoOutstandingRequest();
   }));
 
   it('should retrieve a given task id', inject(function($httpBackend, TodoListService) {
