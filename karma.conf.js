@@ -9,33 +9,32 @@ module.exports = function(config) {
 
         preprocessors: {
           'public/!(jspm_packages)/**/*.js': ['typescript', 'sourcemap', 'coverage'],
-          'public/*.js': ['typescript', 'sourcemap', 'coverage'],
+          'public/fswd.js': ['typescript', 'sourcemap', 'coverage'],
           'test/client/**/*.js': ['typescript']
         },
-
-        // files: [
-        //     'system.js',
-        //     'config.js'
-        // ],
 
         exclude: [], // hmm??
 
         jspm: {
-          // config: 'public/config.js',
+          meta: {
+            'jspm_packages/github/angular/angular.js': {
+              format:  'global',
+              exports: 'angular'
+            },
+            'jspm_packages/gitub/angular/angular-mocks.js': {
+              format: 'global',
+              deps:   'angular'
+            }
+          },
           loadFiles: ['test/client/**/*-spec.js'],
           serveFiles: ['public/**/*.js']
         },
 
         proxies: {
-          '/test/': '/base/test/',
-          '/jspm_packages/': '/base/public/jspm_packages/',
-          '/public': '/base/public/',
+          '/public': '/base/public',
+          '/test': '/base/test',
+          '/jspm_packages': '/base/public/jspm_packages'
         },
-        // proxies: {
-        //   '/public': '/base/public',
-        //   '/test': '/base/test',
-        //   '/jspm_packages': '/base/public/jspm_packages'
-        // },
 
         port: 9876,
 

@@ -1,11 +1,14 @@
 // import angular from 'angular';
 // import from '../../../public/fswd';
 
-//import angular from 'angular';
+import 'angular';
 import 'angular-mocks';
-import 'public/fswd';
 
 describe('fswd', function() {
+  beforeEach(function() {
+    angular.module('fswd', []);
+    angular.mock.module('fswd');
+  });
   it('should exist', function() {
     angular.module('fswd').should.be.ok;
   })
