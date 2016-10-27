@@ -1,4 +1,4 @@
-import angular from 'angular';
+import 'angular';
 import _ from 'lodash';
 import ngRoute from 'angular-route';
 

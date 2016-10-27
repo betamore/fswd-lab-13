@@ -9,23 +9,12 @@ module.exports = function(config) {
 
         preprocessors: {
           'public/!(jspm_packages)/**/*.js': ['typescript', 'sourcemap', 'coverage'],
-          'public/fswd.js': ['typescript', 'sourcemap', 'coverage'],
           'test/client/**/*.js': ['typescript']
         },
 
         exclude: [], // hmm??
 
         jspm: {
-          meta: {
-            'jspm_packages/github/angular/angular.js': {
-              format:  'global',
-              exports: 'angular'
-            },
-            'jspm_packages/gitub/angular/angular-mocks.js': {
-              format: 'global',
-              deps:   'angular'
-            }
-          },
           loadFiles: ['test/client/**/*-spec.js'],
           serveFiles: ['public/**/*.js']
         },

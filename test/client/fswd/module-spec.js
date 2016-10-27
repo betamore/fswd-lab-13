@@ -3,10 +3,10 @@
 
 import 'angular';
 import 'angular-mocks';
+import '/public/fswd';
 
 describe('fswd', function() {
   beforeEach(function() {
-    angular.module('fswd', []);
     angular.mock.module('fswd');
   });
   it('should exist', function() {

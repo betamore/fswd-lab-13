@@ -12,7 +12,8 @@
     "postinstall": "jspm install",
     "jspm": "jspm",
     "sequelize": "sequelize",
-    "mocha": "istanbul cover -x '**/models/index.js' _mocha -- -R spec test/server/*-test.js"
+    "mocha": "istanbul cover -x '**/models/index.js' _mocha -- -R spec test/server/*-test.js",
+    "karma": "karma start"
   },
   "keywords": [],
   "author": "",
