@@ -7,8 +7,8 @@
   "scripts": {
     "start": "node ./lib/index.js",
     "dev": "NODE_ENV=development nodemon ./lib/index.js",
-    "lint": "eslint --ignore-path .gitignore . || exit 0",
-    "test": "npm run mocha",
+    "lint": "eslint .",
+    "test": "npm run mocha && npm run karma",
     "postinstall": "jspm install",
     "jspm": "jspm",
     "sequelize": "sequelize",
@@ -20,10 +20,16 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^3.18.0",
+    "eslint-plugin-angular": "^2.1.0",
     "istanbul": "^0.4.5",
+    "karma-sinon": "^1.0.5",
+    "karma-sinon-chai": "^1.2.4",
     "karma-typescript-preprocessor": "^0.3.0",
     "mocha": "^3.1.2",
     "nodemon": "^1.10.2",
+    "sinon": "^2.1.0",
+    "sinon-chai": "^2.8.0",
     "supertest": "^2.0.0",
     "supertest-as-promised": "^4.0.2"
   },
@@ -65,7 +71,7 @@
     },
     "devDependencies": {
       "angular-mocks": "github:angular/bower-angular-mocks@^1.5.8",
-      "typescript": "npm:typescript@^1.6.2"
+      "typescript": "npm:typescript@^2.0.7"
     }
   }
 }

@@ -44,6 +44,7 @@ module.exports = function(sequelize, DataTypes) {
           console.log("USER '" + user.username + "' WAS CREATED! WOO!!");
         },
         function(user) {
+            console.log(user.email);
           // email address is user.email
         }
       ]

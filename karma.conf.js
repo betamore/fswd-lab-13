@@ -5,7 +5,7 @@ module.exports = function(config) {
         //logLevel: config.LOG_DEBUG,
         basePath: '',
 
-        frameworks: ['jspm', 'mocha', 'chai'],
+        frameworks: ['jspm', 'mocha', 'chai', 'sinon'],
 
         preprocessors: {
           'public/!(jspm_packages)/**/*.js': ['typescript', 'sourcemap', 'coverage'],

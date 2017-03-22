@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - "stable"
+  - 6
 
 services:
   - postgresql
@@ -18,3 +19,9 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+
+env:
+  - SCRIPT=lint
+  - SCRIPT=test
+
+script: npm run $SCRIPT

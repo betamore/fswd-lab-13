@@ -5,7 +5,7 @@ module.exports = {
     return queryInterface.addColumn('Tasks', 'UserId', Sequelize.INTEGER);
   },
 
-  down: function (queryInterface, Sequelize) {
+  down: function (queryInterface) {
     return queryInterface.removeColumn('Tasks', 'UserId');
   }
 };

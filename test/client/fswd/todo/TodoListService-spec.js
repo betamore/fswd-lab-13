@@ -1,6 +1,6 @@
-import 'angular';
-import 'angular-mocks';
-import '/public/fswd/todo';
+var angular = require('angular');
+require('angular-mocks');
+require('/public/fswd/todo');
 
 describe('fswd.todo.TodoListService', function() {
   beforeEach(angular.mock.module('fswd.todo'));

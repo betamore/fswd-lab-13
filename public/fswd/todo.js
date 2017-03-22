@@ -1,6 +1,6 @@
-import 'angular';
-import _ from 'lodash';
-import 'angular-route';
+var angular = require('angular');
+var _ = require('lodash');
+require('angular-route');
 
 angular.module('fswd.todo', ['ngRoute'])
   .run(function($rootScope) {
@@ -81,7 +81,7 @@ angular.module('fswd.todo', ['ngRoute'])
 
     $scope.$watch(function() {
       return TodoListService.getTodoList();
-    }, function(newVal, oldVal) {
+    }, function(newVal) {
       vm.todoList = newVal;
     });
 
@@ -147,5 +147,4 @@ angular.module('fswd.todo', ['ngRoute'])
         );
       },
       templateUrl: '/partials/taskListComponent'
-    }
   });

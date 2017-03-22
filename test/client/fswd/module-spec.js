@@ -1,6 +1,6 @@
-import 'angular';
-import 'angular-mocks';
-import '/public/fswd';
+var angular = require('angular');
+require('angular-mocks');
+require('/public/fswd');
 
 describe('fswd', function() {
   beforeEach(function() {
