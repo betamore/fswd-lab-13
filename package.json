@@ -53,7 +53,7 @@
     "karma-spec-reporter": "0.0.26",
     "pg": "^6.1.0",
     "pug": "^2.0.0-beta6",
-    "sequelize": "^3.24.3",
+    "sequelize": "^3.30.3",
     "sequelize-cli": "^2.4.0",
     "sparkpost": "^2.0.1"
   },
