@@ -13,7 +13,8 @@
     "jspm": "jspm",
     "sequelize": "sequelize",
     "mocha": "istanbul cover -x '**/models/index.js' _mocha -- -R spec test/server/*-test.js",
-    "karma": "karma start"
+    "karma": "karma start",
+    "heroku-postbuild": "NODE_ENV=production sequelize db:migrate"
   },
   "keywords": [],
   "author": "",
