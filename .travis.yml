@@ -1,20 +1,22 @@
 language: node_js
 node_js:
-  - "stable"
-  - 6
-
+- stable
+- 6
 dist: trusty
 sudo: false
-
 services:
-  - postgresql
-  - redis-server
-
+- postgresql
+- redis-server
 before_install:
-  - psql -c 'create database fswd_test;' -U postgres
-
+- psql -c 'create database fswd_test;' -U postgres
 env:
-  - SCRIPT=lint
-  - SCRIPT=test
-
+- SCRIPT=lint
+- SCRIPT=test
 script: npm run $SCRIPT
+deploy:
+  provider: heroku
+  api_key:
+    secure: FS4Y8lK3HUSIby7MmPMFlnEdx8mYM9rQ25e185v2PavSmcr4djUGz+wSQuMrYpqprOmx8/viu+yMqWw6yjkW3vkxVbQxCR0duBzevsbsY+pDV8IdD1AoIC8xYKBv7Jmi9W9vjcQujxM4+VgdwWp95sJ8137jpwLnOJ1vo7WeE+qB6KJFN70HlvMU5LFSOs352QJR4Gu+Z4dsKsSw2rncHdJgRAXZ/Vdlk0IO+WAg3UvZUS8GNgW0D4FH2kZSJ2BwXpTzBcN8+ArCPIseVOSW/d9dM7ihmqxnLxJw2PtcuujHo8yIKUl1qDQxZGSSauUAGmHLN5TH580kd1xlyCHm+AccUb0FdY6rvviEMkvVhQW+LHykU8QU5D/C3B5vIjY8FAGgzHMH+4A3uoSQY69mLUN077sXqXZ8ZMJ83qcoBUBKO4sGPcVDkj2uFK6zPcjbQfYmxXLnXng8sbO4AiYvdfX3smD1Oeqe6AQuxaU9L5F0OVO+9wdlg/tlOqqyGa9IkorePqHMmslGfjT6k4ENxRYjfKSM7qNzrc/HxrRRLUtsKxe9JrPxCk0LThnDsWNI6QLOCFKeCnT2Ib9vbgmxU20LXUXJGqC/oS8GrzNCchH9DLjwM0YuR2Chnc2HEldB1nK53R/am4IAeizziQyrkEOxyNrsS+w7iSAQJX8rN6A=
+  app: fathomless-scrubland-68080
+  on:
+    repo: betamore/fswd-lab-13
