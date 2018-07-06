@@ -25,7 +25,7 @@
     "eslint-plugin-angular": "^2.1.0",
     "istanbul": "^0.4.5",
     "karma-sinon": "^1.0.5",
-    "karma-sinon-chai": "^1.2.4",
+    "karma-sinon-chai": "^2.0.0",
     "karma-typescript-preprocessor": "^0.3.0",
     "mocha": "^3.1.2",
     "nodemon": "^1.10.2",
