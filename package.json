@@ -27,7 +27,7 @@
     "karma-sinon": "^1.0.5",
     "karma-sinon-chai": "^1.2.4",
     "karma-typescript-preprocessor": "^0.3.0",
-    "mocha": "^3.1.2",
+    "mocha": "^6.1.4",
     "nodemon": "^1.10.2",
     "sinon": "^2.1.0",
     "sinon-chai": "^2.8.0",
