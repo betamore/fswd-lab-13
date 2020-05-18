@@ -44,7 +44,7 @@
     "express-messages": "^1.0.1",
     "express-session": "^1.14.1",
     "jspm": "^0.16.45",
-    "karma": "^1.3.0",
+    "karma": "^5.0.8",
     "karma-chai": "^0.1.0",
     "karma-coverage": "^1.1.1",
     "karma-jspm": "^2.2.0",
